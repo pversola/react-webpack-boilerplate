@@ -11,15 +11,8 @@
 
 ```javascript
 node_modules
+dist
 ```
-
-- Create an *"src folder, index.js and index.html"* file
-
-`mkdir src`
-
-`touch src/index.js`
-
-`touch src/index.html`
 
 ## Setup Babel
 See more on [Babel](https://babeljs.io/docs/en/index.html)
@@ -70,7 +63,7 @@ or
 `yarn add webpack webpack-cli webpack-dev-server html-webpack-plugin style-loader css-loader -D`
 
 ## Config Webpack
-create a file *"webpack.config.js"* and add following code;
+- Create a file *"webpack.config.js"* and add following code;
 
 ```javascript
 const path = require('path');
@@ -93,7 +86,7 @@ module.exports = {
             exclude: /node_modules/,
             loader: 'babel-loader',
             query: {
-                presets: ['@babel/preset-env', '@babel/react'],
+                presets: ['@babel/preset-env', '@babel/preset-react'],
             },
             },
             {
@@ -108,6 +101,110 @@ module.exports = {
         }),
     ],
 };
+```
+
+- Add scripts to in **package.json**
+
+```javascript
+"scripts": {
+    "start": "webpack-dev-server --open --hot --mode development",
+    "build": "webpack --mode production"
+  },
+```
+
+## Setup React
+- Install React and ReactDOM
+`npm i react react-dom`
+
+or
+
+`yarn add react react-dom`
+
+- Create file *"index.html"* in root
+
+```javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+
+  </div>
+</body>
+</html>
+```
+
+- Create *"src"* folder and add *"index.js"* file to the folder
+
+`mkdir src`
+
+`touch src/index.js`
+
+In src/index.js add
+
+```javascript
+import React from 'react';
+import ReactDom from 'react-dom';
+import App from './components/App';
+
+ReactDom.render(<App />, document.getElementById('root'));
+```
+
+- Create *"components"* folder in src and add *"APP.js"* file to the folder
+
+`mkdir components`
+
+`touch components/APP.js`
+
+In components/App.js add
+
+```javascript
+import React from 'react';
+
+const App = () => {
+  return (
+    <div>
+      <h1>You just setup react with babel and eslint</h1>
+    </div>
+  );
+};
+ 
+export default App;
+```
+
+## Setup ES lint
+- Install ES lint and plugin
+  
+`npm i eslint eslint-config-airbnb-base eslint-plugin-import -D`
+
+or
+
+`yarn add eslint eslint-config-airbnb-base eslint-plugin-import -D`
+
+- Create file *".eslintrc"* in root
+  
+`touch .eslinrc`
+
+In .eslinrc add
+
+```javascript
+{
+  "extends": ["airbnb"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "commonjs": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  }
+}
 ```
 
 ## reference
