@@ -52,12 +52,13 @@ or
 ```
 ## Setup Webpack
 See more on [Webpack](https://webpack.js.org/concepts/)
-*** tool ***
+
+** tool **
 - webpack
 - webpack-cli
 - webpack-dev-server
 
-*** plugin ***
+** plugin **
 - html-webpack-plugin
 - style-loader
 - css-loader
