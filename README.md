@@ -53,12 +53,12 @@ or
 ## Setup Webpack
 See more on [Webpack](https://webpack.js.org/concepts/)
 
-** tool **
+**Tool**
 - webpack
 - webpack-cli
 - webpack-dev-server
 
-** plugin **
+**Plugin**
 - html-webpack-plugin
 - style-loader
 - css-loader
