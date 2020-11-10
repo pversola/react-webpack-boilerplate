@@ -9,7 +9,7 @@
 - Create a .gitignore
 `touch .gitignore`
 
-```javascript
+```
 node_modules
 ```
 
@@ -154,3 +154,5 @@ module.exports = {
 1. [Reference](https://blog.usejournal.com/setup-react-using-webpack4-babel-7-and-eslint-airbnb-styling-d69c4b2e1da9)
 1. [Reference2](https://blog.usejournal.com/setting-up-react-webpack-4-babel-7-from-scratch-2019-b771dca2f637)
 1. [Reference3](https://engineering.thinknet.co.th/tutorial-%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%95%E0%B8%AD%E0%B8%B1%E0%B8%9E-webpack-%E0%B9%81%E0%B8%A5%E0%B8%B0-react-%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B9%81%E0%B8%95%E0%B9%88%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%95%E0%B9%89%E0%B8%99%E0%B8%88%E0%B8%99-deploy-fa3d53e96469)
+2. [how-to-use-webpack](https://www.taniarascia.com/how-to-use-webpack/)
+3. [Github - taniarascia](https://github.com/taniarascia/webpack-boilerplate)
