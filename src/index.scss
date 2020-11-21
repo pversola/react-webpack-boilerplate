@@ -1,7 +1,5 @@
-@font-face {
-  font-family: 'Inter';
-  src: url('./fonts/Inter.ttf');
-}
+@import "./scss/vriables";
 
-@import './styles/variables';
-@import './styles/scaffolding';
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "./scss/global";
